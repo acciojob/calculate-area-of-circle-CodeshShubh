@@ -2,18 +2,17 @@
             // Get the radius from the user using the prompt() function
             let radius = prompt("Enter the radius of the circle:");
             // write you code here and display the result to the user
-	    
-  //    let radius =   document.getElementById('radius').value.trim();
-	 // let btn = document.getElementById('btn');
-	 if(radius ===''){
-     alert("plese enter input")
+
+	 if(radius ==='' || parseInt(radius,10)<0 ){
+     alert("plese enter positive number")
 	 }else{
-		 let pi = 3.14;
-		 let circle = 2*pi*radius
-		 alert(`The area of the circle with radius ${radius} is 50.27`)
+		 let pi = Math.PI
+		 let circle = pi*radius*radius
+		 alert(`The area of the circle with radius ${radius} is ${circle.toFixed(2)}`)
 	 }
       
 	 
 }
 
-calculateArea();
+calculateArea();   
+ 
